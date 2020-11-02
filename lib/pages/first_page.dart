@@ -32,19 +32,22 @@ class _FirstPageState extends State<FirstPage> {
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20,right: 20),
+              child: Text(
                 "See What Others\n Are Making",
                 style:
                 TextStyle(fontSize: 24, fontFamily: Constants.FontSemiBolo),
               ),
-              _getSizeBox(20, 0),
-              Container(
+            ),
+            _getSizeBox(20, 0),
+            Padding(
+              padding: const EdgeInsets.only(left: 20,right: 20),
+              child: Container(
                 height: 40,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -87,55 +90,58 @@ class _FirstPageState extends State<FirstPage> {
                   },
                 ),
               ),
-              Container(
-                child: Expanded(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    primary: true,
-                    children: [
-                      Container(
-                        height: 100,
-                        margin: EdgeInsets.symmetric(vertical: 5),
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 10,
-                          itemBuilder: (context, index) {
-                            if(index==0){
-                              return _getChatListAdd();
-                            }
-                            else{
-                              return _getChatList();
-                            }
-                          },
-                        ),
+            ),
+            Container(
+              child: Expanded(
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  primary: true,
+                  children: [
+                    Container(
+                      height: 100,
+                      margin: EdgeInsets.symmetric(vertical: 5),
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 10,
+                        itemBuilder: (context, index) {
+                          if(index==0){
+                            return _getChatListAdd();
+                          }
+                          else{
+                            return _getChatList();
+                          }
+                        },
                       ),
-                      Container(
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20),
+                      child: Container(
                         height: 2,
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Color(0xfff0f0f0)
                         ),
                       ),
-                      _getSizeBox(20, 0),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Text("Popular Recipes",style: TextStyle(fontFamily: Constants.FontSemiBolo,fontSize: 20),),
-                      ),
-                      _getSizeBox(10, 0),
-                      _getItem(),
-                      _getItem(),
-                      _getItem(),
-                      _getItem(),
-                      _getItem(),
-                      _getItem(),
+                    ),
+                    _getSizeBox(20, 0),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30),
+                      child: Text("Popular Recipes",style: TextStyle(fontFamily: Constants.FontSemiBolo,fontSize: 20),),
+                    ),
+                    _getSizeBox(10, 0),
+                    _getItem(),
+                    _getItem(),
+                    _getItem(),
+                    _getItem(),
+                    _getItem(),
+                    _getItem(),
 
-                    ],
-                  ),
+                  ],
                 ),
-              )
+              ),
+            )
 
-            ],
-          ),
+          ],
         ));
   }
 
@@ -150,7 +156,7 @@ class _FirstPageState extends State<FirstPage> {
         children: [
           CircleAvatar(
             radius: 30,
-            backgroundImage: AssetImage(Constants.AsetsImage+"profile.png",),
+            backgroundImage: AssetImage(Constants.AsetsImage+"place_holder.jpg",),
 
           ),
           _getSizeBox(5, 0),
@@ -177,7 +183,7 @@ class _FirstPageState extends State<FirstPage> {
 
   Widget _getItem(){
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(left: 20,right: 20),
       child: Column(
         children: [
           Container(
@@ -221,7 +227,7 @@ class _FirstPageState extends State<FirstPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 20),
                   child: _getCircleImage(),
                 ),
                 _getSizeBox(0, 20),

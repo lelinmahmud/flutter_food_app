@@ -24,7 +24,8 @@ class _FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        backgroundColor: Colors.black,
+        child: Icon(Icons.add,color: Colors.white,),
       ),
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -54,7 +55,7 @@ class _FirstPageState extends State<FirstPage> {
               ),
               _getSizeBox(20, 0),
               Container(
-                height: 60,
+                height: 40,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Color(0xfff0f0f0),
@@ -66,7 +67,7 @@ class _FirstPageState extends State<FirstPage> {
                     suffixIcon: Padding(
                       padding: const EdgeInsets.only(right: 20),
                       child: Container(
-                          height: 30,
+                          height: 25,
                           width: 50,
                           decoration: BoxDecoration(
                             color: Color(0xffd7d8dd),
@@ -88,7 +89,7 @@ class _FirstPageState extends State<FirstPage> {
                     enabledBorder: InputBorder.none,
                     errorBorder: InputBorder.none,
                     disabledBorder: InputBorder.none,
-                    contentPadding: EdgeInsets.all(20),
+                    contentPadding: EdgeInsets.all(6),
                     hintText: "Search for a recipe",
                   ),
                   onFieldSubmitted: (value) {
@@ -98,7 +99,7 @@ class _FirstPageState extends State<FirstPage> {
               ),
               Container(
                 height: 100,
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: EdgeInsets.symmetric(vertical: 5),
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 10,
@@ -217,7 +218,7 @@ class _FirstPageState extends State<FirstPage> {
           ),
           Container(
             height: 100,
-            child: ,
+            child: Text("hello"),
           )
         ],
       ),

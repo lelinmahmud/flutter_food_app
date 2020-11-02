@@ -183,7 +183,7 @@ class _FirstPageState extends State<FirstPage> {
 
   Widget _getItem(){
     return Padding(
-      padding: const EdgeInsets.only(left: 20,right: 20),
+      padding: const EdgeInsets.all(15),
       child: Column(
         children: [
           Container(

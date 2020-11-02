@@ -57,6 +57,10 @@ flutter:
      - assets/bi.jpg
      - assets/pizza.png
      - assets/food.png
+     - assets/chef.png
+     - assets/speech.png
+     - assets/user.png
+     - assets/place_holder.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

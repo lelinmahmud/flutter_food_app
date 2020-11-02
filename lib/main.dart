@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:random_app/constants/constants.dart';
+import 'package:random_app/pages/categories_page.dart';
 import 'package:random_app/pages/first_page.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -51,7 +52,7 @@ class _MainPageState extends State<MainPage> {
           /// Likes
           SalomonBottomBarItem(
             icon: Image.asset(Constants.AsetsImage+"speech.png",height: 20,width: 20,),
-            title: Text("Likes"),
+            title: Text("Categories"),
             selectedColor: Colors.pink,
           ),
 
@@ -74,7 +75,8 @@ class _MainPageState extends State<MainPage> {
         controller: _pageController,
         physics: NeverScrollableScrollPhysics(),
         children: [
-          FirstPage()
+          FirstPage(),
+          CategoriesPage()
         ],
       ),
     );

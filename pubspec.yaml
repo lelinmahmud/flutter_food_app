@@ -25,6 +25,8 @@ dependencies:
     sdk: flutter
   salomon_bottom_bar: ^2.0.0
   flutter_staggered_grid_view: ^0.3.2
+  dots_indicator: ^1.2.0
+
 
 
 
